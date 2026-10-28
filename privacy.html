@@ -15,13 +15,14 @@
 </head>
 <body>
   <h1>Politique de confidentialite</h1>
-  <p class="date">Derniere mise a jour : 2 mai 2026</p>
+  <p class="date">Derniere mise a jour : 28 octobre 2026</p>
 
   <p>Octane ("nous", "l'application") respecte votre vie privee. Cette politique explique quelles donnees nous collectons, pourquoi, et comment nous les protegeons.</p>
 
   <h2>1. Donnees collectees</h2>
   <ul>
-    <li><strong>Localisation (pendant l'utilisation uniquement)</strong> : votre position GPS est utilisee pour trouver les stations a proximite. Elle n'est jamais stockee sur nos serveurs ni partagee avec des tiers. L'application demande uniquement la permission "While Using" (pendant l'utilisation).</li>
+    <li><strong>Localisation (pendant l'utilisation uniquement)</strong> : votre position GPS est transmise a notre service Supabase pour trouver les stations a proximite. Pour la recherche manuelle, le lieu saisi (ville, adresse ou code postal) est transmis a Supabase puis a Google Maps pour obtenir ses coordonnees. Pour le calculateur de detour, le serveur transmet votre point de depart et la position de la station a Google Maps afin de calculer les distances et durees routieres. Octane ne conserve aucun historique de positions ou de trajets sur ses serveurs. L'application demande uniquement la permission "While Using" (pendant l'utilisation).</li>
+    <li><strong>Compteurs de recherche et de calcul</strong> : nous enregistrons temporairement votre identifiant de compte, une tranche horaire et le nombre de demandes afin de limiter les abus. Ces compteurs ne contiennent aucune adresse, position ni aucun trajet et sont automatiquement purges en moins de trois jours.</li>
     <li><strong>Adresse email</strong> : si vous creez un compte, nous stockons votre email pour l'authentification. Il n'est utilise a aucune autre fin.</li>
     <li><strong>Preferences vehicule</strong> : type de carburant, consommation, rayon de recherche. Stockees localement sur votre appareil et dans votre profil si vous etes connecte.</li>
     <li><strong>Stations favorites et alertes</strong> : stockees dans votre profil utilisateur pour la synchronisation entre appareils.</li>
@@ -62,6 +63,7 @@
   <h2>7. Services tiers</h2>
   <ul>
     <li><strong>Supabase</strong> : hebergement base de donnees et authentification (EU-West-1).</li>
+    <li><strong>Google Maps</strong> : cartographie, recherche de lieux et calcul des itineraires. Les donnees transmises pour ces services sont traitees selon les <a href="https://maps.google.com/help/terms_maps/">conditions Google Maps</a> et la <a href="https://policies.google.com/privacy?hl=fr">politique de confidentialite de Google</a>.</li>
     <li><strong>RevenueCat</strong> : gestion des abonnements in-app.</li>
     <li><strong>Sentry</strong> : suivi des erreurs techniques (aucune donnee personnelle transmise).</li>
     <li><strong>PostHog</strong> : analytics d'usage anonymisees (instance UE).</li>
@@ -73,6 +75,7 @@
     <li>France : data.economie.gouv.fr — Licence Ouverte v2.0</li>
     <li>Espagne : Ministerio para la Transicion Ecologica (MITECO)</li>
     <li>Luxembourg : donnees publiques gouvernementales</li>
+    <li>Italie : Ministero delle Imprese e del Made in Italy (MIMIT), Osservaprezzi Carburanti</li>
   </ul>
 
   <h2>9. Contact</h2>
