@@ -24,9 +24,13 @@
     <li><strong>Localisation (pendant l'utilisation uniquement)</strong> : votre position GPS est transmise a notre service Supabase pour trouver les stations a proximite. Pour la recherche manuelle, le lieu saisi (ville, adresse ou code postal) est transmis a Supabase puis a Google Maps pour obtenir ses coordonnees. Pour le calculateur de detour, le serveur transmet votre point de depart et la position de la station a Google Maps afin de calculer les distances et durees routieres. Octane ne conserve aucun historique de positions ou de trajets sur ses serveurs. L'application demande uniquement la permission "While Using" (pendant l'utilisation).</li>
     <li><strong>Compteurs de recherche et de calcul</strong> : nous enregistrons temporairement votre identifiant de compte, une tranche horaire et le nombre de demandes afin de limiter les abus. Ces compteurs ne contiennent aucune adresse, position ni aucun trajet et sont automatiquement purges en moins de trois jours.</li>
     <li><strong>Adresse email</strong> : si vous creez un compte, nous stockons votre email pour l'authentification. Il n'est utilise a aucune autre fin.</li>
+    <li><strong>Identifiant de compte et connexion Google</strong> : un identifiant technique relie vos donnees a votre compte. Si vous choisissez la connexion Google, Supabase recoit aussi les informations de profil transmises par Google, notamment votre nom et votre adresse email.</li>
     <li><strong>Preferences vehicule</strong> : type de carburant, consommation, rayon de recherche. Stockees localement sur votre appareil et dans votre profil si vous etes connecte.</li>
     <li><strong>Stations favorites et alertes</strong> : stockees dans votre profil utilisateur pour la synchronisation entre appareils.</li>
     <li><strong>Token de notification push</strong> : si vous activez les alertes, un identifiant technique est stocke pour vous envoyer des notifications.</li>
+    <li><strong>Carnet carburant</strong> : les pleins, montants, volumes, kilometrages, vehicules et notes que vous saisissez sont associes a votre compte pour afficher votre historique et vos statistiques.</li>
+    <li><strong>Abonnements</strong> : RevenueCat traite votre identifiant technique et l'historique de vos achats Premium pour verifier vos droits et restaurer vos achats. Octane ne recoit pas vos numeros de carte bancaire.</li>
+    <li><strong>Usage et diagnostics</strong> : PostHog recoit des evenements d'utilisation (recherches, ouverture de fonctions, stations selectionnees, calculs, favoris et achats), des informations techniques et un identifiant pseudonyme, relie a votre identifiant de compte lorsque vous etes connecte. Ces donnees sont pseudonymes, et non anonymes. Sentry recoit les erreurs, journaux de plantage, informations sur l'appareil et mesures de performance. Les fournisseurs peuvent aussi traiter l'adresse IP necessaire aux communications reseau. Ces traitements servent a mesurer l'usage et ameliorer la fiabilite de l'application.</li>
   </ul>
 
   <h2>2. Donnees NON collectees</h2>
@@ -48,7 +52,7 @@
   <p>Vos donnees sont hebergees sur Supabase (infrastructure AWS, region EU-West-1, Irlande). L'acces aux donnees est protege par des politiques de securite au niveau ligne (Row Level Security). Les communications sont chiffrees en HTTPS/TLS.</p>
 
   <h2>5. Duree de conservation</h2>
-  <p>Vos donnees sont conservees tant que votre compte est actif. En cas de suppression de compte, toutes vos donnees personnelles (profil, favoris, alertes) sont supprimees definitivement dans un delai de 30 jours.</p>
+  <p>Les donnees de votre compte sont conservees tant qu'il est actif. La suppression dans l'application efface le compte Supabase et les donnees associees de la base active (profil, favoris, alertes, vehicules et carnet carburant). Pour les donnees conservees par nos prestataires, vous pouvez egalement demander leur suppression selon la procedure ci-dessous ; certaines informations peuvent rester conservees selon leurs obligations legales et leurs politiques de retention.</p>
 
   <h2>6. Vos droits</h2>
   <p>Conformement au RGPD, vous disposez des droits suivants :</p>
@@ -60,14 +64,19 @@
     <li><strong>Opposition</strong> : desactivez la geolocalisation ou les notifications dans les reglages de votre appareil a tout moment.</li>
   </ul>
 
+  <h2 id="suppression">Demander la suppression de votre compte ou de vos donnees</h2>
+  <p>Dans Octane, ouvrez <strong>Profil &gt; Supprimer mon compte</strong>, puis confirmez. Si vous n'avez plus acces a l'application, ecrivez a <a href="mailto:aegis.lab.pro@gmail.com?subject=Octane%20-%20suppression%20de%20compte">aegis.lab.pro@gmail.com</a>, depuis l'adresse associee a votre compte, avec l'objet <strong>Octane - suppression de compte</strong>. Nous verifions votre identite avant toute suppression et traitons la demande sous 30 jours.</p>
+  <p>Vous pouvez demander la suppression d'une partie de vos donnees sans fermer votre compte : precisez <strong>Octane - suppression de donnees</strong> et les elements concernes (favoris, alertes, carnet carburant, vehicules ou donnees d'usage). N'envoyez jamais votre mot de passe. Pour une demande concernant les statistiques, diagnostics ou donnees d'abonnement, nous traitons aussi la demande aupres du prestataire concerne. Les obligations legales applicables peuvent limiter la suppression de certaines donnees de transaction.</p>
+  <p>La suppression du compte Octane <strong>ne resilie pas un abonnement Google Play ou App Store</strong>. Vous pouvez le resilier depuis la gestion des abonnements de votre boutique.</p>
+
   <h2>7. Services tiers</h2>
   <ul>
     <li><strong>Supabase</strong> : hebergement base de donnees et authentification (EU-West-1).</li>
     <li><strong>Resend</strong> : envoi des emails d'authentification (confirmation de compte et recuperation de mot de passe). L'adresse du destinataire et le contenu necessaire au message sont transmis a ce prestataire. Consultez la <a href="https://resend.com/legal/privacy-policy">politique de confidentialite de Resend</a>.</li>
     <li><strong>Google Maps</strong> : cartographie, recherche de lieux et calcul des itineraires. Les donnees transmises pour ces services sont traitees selon les <a href="https://maps.google.com/help/terms_maps/">conditions Google Maps</a> et la <a href="https://policies.google.com/privacy?hl=fr">politique de confidentialite de Google</a>.</li>
-    <li><strong>RevenueCat</strong> : gestion des abonnements in-app.</li>
-    <li><strong>Sentry</strong> : suivi des erreurs techniques (aucune donnee personnelle transmise).</li>
-    <li><strong>PostHog</strong> : analytics d'usage anonymisees (instance UE).</li>
+    <li><strong>RevenueCat</strong> : gestion des abonnements in-app, identifiant de compte et historique des achats ; <a href="https://www.revenuecat.com/privacy">politique de confidentialite</a>.</li>
+    <li><strong>Sentry</strong> : suivi des erreurs, diagnostics et performances ; <a href="https://sentry.io/privacy/">politique de confidentialite</a>.</li>
+    <li><strong>PostHog</strong> : mesure d'usage pseudonyme (instance UE) ; <a href="https://posthog.com/privacy">politique de confidentialite</a>.</li>
     <li><strong>Expo</strong> : service de notifications push.</li>
   </ul>
 
