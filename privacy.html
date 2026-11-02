@@ -15,13 +15,13 @@
 </head>
 <body>
   <h1>Politique de confidentialite</h1>
-  <p class="date">Derniere mise a jour : 29 octobre 2026</p>
+  <p class="date">Derniere mise a jour : 2 novembre 2026</p>
 
   <p>Octane ("nous", "l'application") respecte votre vie privee. Cette politique explique quelles donnees nous collectons, pourquoi, et comment nous les protegeons.</p>
 
   <h2>1. Donnees collectees</h2>
   <ul>
-    <li><strong>Localisation (pendant l'utilisation uniquement)</strong> : votre position GPS est transmise a notre service Supabase pour trouver les stations a proximite. Pour la recherche manuelle, le lieu saisi (ville, adresse ou code postal) est transmis a Supabase puis a Google Maps pour obtenir ses coordonnees. Pour le calculateur de detour, le serveur transmet votre point de depart et la position de la station a Google Maps afin de calculer les distances et durees routieres. Octane ne conserve aucun historique de positions ou de trajets sur ses serveurs. L'application demande uniquement la permission "While Using" (pendant l'utilisation).</li>
+    <li><strong>Localisation (pendant l'utilisation uniquement)</strong> : votre position GPS est transmise a notre service Supabase pour trouver les stations a proximite. A partir de la version 1.2.1, la recherche sans compte d'une ville ou d'un code postal francais transmet la saisie directement a geo.api.gouv.fr pour obtenir le centre de la commune ; aucun compte n'est cree et aucun appel Google n'est effectue pour cette recherche. Le service recoit egalement l'adresse IP necessaire a la connexion. Pour la recherche manuelle avec un compte connecte, le lieu saisi (ville, adresse ou code postal) est transmis a Supabase puis a Google Maps pour obtenir ses coordonnees. Pour le calculateur de detour, le serveur transmet votre point de depart et la position de la station a Google Maps afin de calculer les distances et durees routieres. Les coordonnees du lieu choisi sont transmises a Supabase pour rechercher les stations alentour. Octane ne conserve aucun historique de positions ou de trajets sur ses serveurs. L'application demande uniquement la permission "While Using" (pendant l'utilisation).</li>
     <li><strong>Compteurs de recherche et de calcul</strong> : nous enregistrons temporairement votre identifiant de compte, une tranche horaire et le nombre de demandes afin de limiter les abus. Ces compteurs ne contiennent aucune adresse, position ni aucun trajet et sont automatiquement purges en moins de trois jours.</li>
     <li><strong>Adresse email</strong> : si vous creez un compte, nous stockons votre email pour l'authentification. Il n'est utilise a aucune autre fin.</li>
     <li><strong>Identifiant de compte et connexion Google</strong> : un identifiant technique relie vos donnees a votre compte. Si vous choisissez la connexion Google, Supabase recoit aussi les informations de profil transmises par Google, notamment votre nom et votre adresse email.</li>
@@ -72,6 +72,7 @@
   <h2>7. Services tiers</h2>
   <ul>
     <li><strong>Supabase</strong> : hebergement base de donnees et authentification (EU-West-1).</li>
+    <li><strong>geo.api.gouv.fr</strong> : service public de recherche des communes francaises, utilise pour les villes et codes postaux sans compte a partir de la version 1.2.1. Le nom ou code postal saisi et l'adresse IP necessaire a la connexion sont transmis directement au service ; <a href="https://geo.api.gouv.fr/decoupage-administratif/communes">documentation du service</a>.</li>
     <li><strong>Resend</strong> : envoi des emails d'authentification (confirmation de compte et recuperation de mot de passe). L'adresse du destinataire et le contenu necessaire au message sont transmis a ce prestataire. Consultez la <a href="https://resend.com/legal/privacy-policy">politique de confidentialite de Resend</a>.</li>
     <li><strong>Google Maps</strong> : cartographie, recherche de lieux et calcul des itineraires. Les donnees transmises pour ces services sont traitees selon les <a href="https://maps.google.com/help/terms_maps/">conditions Google Maps</a> et la <a href="https://policies.google.com/privacy?hl=fr">politique de confidentialite de Google</a>.</li>
     <li><strong>RevenueCat</strong> : gestion des achats integres (Premium et soutien ponctuel), identifiant de compte et historique des achats ; <a href="https://www.revenuecat.com/privacy">politique de confidentialite</a>.</li>
