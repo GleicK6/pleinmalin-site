@@ -15,7 +15,7 @@
 </head>
 <body>
   <h1>Politique de confidentialite</h1>
-  <p class="date">Derniere mise a jour : 2 novembre 2026</p>
+  <p class="date">Derniere mise a jour : 3 novembre 2026</p>
 
   <p>Octane ("nous", "l'application") respecte votre vie privee. Cette politique explique quelles donnees nous collectons, pourquoi, et comment nous les protegeons.</p>
 
@@ -29,6 +29,8 @@
     <li><strong>Stations favorites et alertes</strong> : les favoris et le choix de la station affichee a l'accueil sont conserves localement sur l'appareil, separement pour chaque compte et pour le mode visiteur. Ils ne sont pas synchronises entre appareils. Les alertes activees volontairement sont associees a votre compte sur Supabase : station choisie le cas echeant, carburant, seuil de prix et date du dernier envoi. Elles peuvent etre supprimees dans Mes alertes.</li>
     <li><strong>Reprise du mode visiteur</strong> : a partir de la version 1.3.1, apres une connexion, vous pouvez accepter ou refuser de reprendre le lieu de recherche et les favoris de votre session visiteur sur ce meme appareil. La proposition reste en memoire pendant dix minutes au maximum. Le lieu n'est pas applique au compte et les favoris ne sont pas deplaces sans votre accord. Aucun historique de positions n'est cree sur nos serveurs.</li>
     <li><strong>Comparaison offerte</strong> : a partir de la version 1.3.0, nous conservons l'identifiant du compte et la date d'utilisation de sa comparaison offerte jusqu'a la suppression du compte. Une reservation technique expire rapidement si le calcul echoue. Ce suivi ne contient aucune position ni aucun trajet.</li>
+    <li><strong>Mode Sur mon trajet</strong> : a partir de la version 1.4.0, le depart, l'arrivee et les coordonnees des stations selectionnees sont transmis a Supabase puis a Google Maps pour calculer le trajet direct et les passages par les stations. Le trace routier sert temporairement a rechercher les stations a proximite ; il n'est pas conserve dans notre base. Les lieux choisis et resultats restent uniquement en memoire sur l'appareil, au maximum trente minutes pour les resultats, et sont effaces lors d'un changement de compte. Ils ne sont pas synchronises entre appareils. Ouvrir la navigation transmet ces points a Google Maps.</li>
+    <li><strong>Recherche de trajet offerte</strong> : un suivi distinct de la comparaison du calculateur conserve l'identifiant du compte et la date de consommation de la recherche offerte jusqu'a la suppression du compte. Une reservation de deux minutes protege les demandes en cours. Ce suivi technique ne contient ni adresse, ni coordonnee, ni trace de trajet.</li>
     <li><strong>Token de notification push</strong> : si vous activez les alertes, un identifiant technique est stocke pour vous envoyer des notifications.</li>
     <li><strong>Carnet carburant</strong> : les pleins, montants, volumes, kilometrages, vehicules et notes que vous saisissez sont associes a votre compte pour afficher votre historique et vos statistiques.</li>
     <li><strong>Achats integres</strong> : RevenueCat traite votre identifiant technique et l'historique de vos achats (abonnements Premium et soutiens ponctuels presentes comme des cafes). Ces donnees servent a gerer les transactions et, pour Premium, verifier vos droits et restaurer vos achats. Octane ne recoit pas vos numeros de carte bancaire.</li>
@@ -55,7 +57,7 @@
   <p>Vos donnees sont hebergees sur Supabase (infrastructure AWS, region EU-West-1, Irlande). L'acces aux donnees est protege par des politiques de securite au niveau ligne (Row Level Security). Les communications sont chiffrees en HTTPS/TLS.</p>
 
   <h2>5. Duree de conservation</h2>
-  <p>Les donnees de votre compte sont conservees tant qu'il est actif. La suppression dans l'application efface le compte Supabase et les donnees associees de la base active (profil, alertes, suivi de la comparaison offerte, vehicules et carnet carburant). Les favoris locaux peuvent etre retires dans Mes favoris ou en effacant les donnees de l'application sur l'appareil. Pour les donnees conservees par nos prestataires, vous pouvez egalement demander leur suppression selon la procedure ci-dessous ; certaines informations peuvent rester conservees selon leurs obligations legales et leurs politiques de retention.</p>
+  <p>Les donnees de votre compte sont conservees tant qu'il est actif. La suppression dans l'application efface le compte Supabase et les donnees associees de la base active (profil, alertes, suivi de la comparaison et de la recherche de trajet offertes, vehicules et carnet carburant). Les favoris locaux peuvent etre retires dans Mes favoris ou en effacant les donnees de l'application sur l'appareil. Pour les donnees conservees par nos prestataires, vous pouvez egalement demander leur suppression selon la procedure ci-dessous ; certaines informations peuvent rester conservees selon leurs obligations legales et leurs politiques de retention.</p>
 
   <h2>6. Vos droits</h2>
   <p>Conformement au RGPD, vous disposez des droits suivants :</p>
